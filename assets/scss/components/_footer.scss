@@ -1,0 +1,46 @@
+/*=============== FOOTER ===============*/
+.footer{
+    background-color: var(--first-color-lighten);
+    padding-bottom: 2rem;
+
+    &_container{
+        row-gap: 2rem;
+    }
+
+    &_logo, 
+    &_title{
+        font-size: var(--h3-font-size);
+        margin-bottom: var(--mb-0-75);
+    }
+    &_logo{
+        display: inline-block;
+        font-weight: var(--font-semi-bold);
+        color: var(--title-color);
+    }
+    &_description,
+    &_link{
+        font-size: var(--small-font-size);
+    }
+    &_links{
+        display: grid;
+        row-gap: .5rem;
+    }
+    &_link{
+        color: var(--title-color);
+    }
+    &_social{
+        display: flex;
+        column-gap: 1.5rem;
+
+        &-link{
+            font-size: 1.25rem;
+            color: var(--title-color);
+        }
+    }
+    &_copy{
+        margin-top: 6rem;
+        text-align: center;
+        font-size: var(--smaller-font-size);
+        color: var(--text-color);
+    }
+}

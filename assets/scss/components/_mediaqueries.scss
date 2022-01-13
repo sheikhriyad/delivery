@@ -1,0 +1,145 @@
+/*=============== MEDIA QUERIES ===============*/
+/* For small devices */
+@media screen and (max-width: 360px){
+    .svg__img{
+        width: 100%;
+    }
+
+    .section{
+        padding: 3.5rem 0 1rem;
+    }
+
+    .services__img{
+        width: 100px;
+    }
+
+    .app__buttons{
+        grid-template-columns: max-content;
+    }
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+    .svg_img {
+        width: 100%;
+    }
+    .section_title-center {
+        text-align: initial;
+    }
+    .home_container, 
+    .about_container,
+    .security_container,
+    .services_container,
+    .app_container,
+    .contact_container,
+    .footer_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .home_container,
+    .about_container,
+    .security_container,
+    .app_container,
+    .contact_container {
+        align-items: center;
+    }
+    .home_img {
+        order: 1;
+    }
+    .app_buttons {
+        justify-content: initial;
+    }
+    .about_data,
+    .security_data,
+    .app_data,
+    .contact_description{
+        text-align: initial;
+    }
+    .about_img,
+    .app_img {
+        order: -1;
+    }
+}
+
+@media screen and (min-width: 767px){
+    body{
+        margin: 0;
+    }
+    .section{
+        padding: 6rem 0 2rem;
+    }
+    .nav{
+        height: calc(var(--header-height) + 1.5rem);
+
+        &_list{
+            flex-direction: row;
+            column-gap: 2.5rem;
+        }
+        &_toggle{
+            display: none;
+        }
+    }
+    .change-theme {
+        position: initial;
+    }
+    .home_container {
+        padding: 6rem 0 2rem;
+    }
+    .app__buttons {
+        justify-content: initial;
+    }
+}
+
+/* For large devices */
+@media screen and (min-width: 968px) {
+    .button_header {
+        display: block;
+    }
+    .svg_img {
+        width: 470px;
+    }
+    .about_container,
+    .security_container,
+    .app_container,
+    .contact_container {
+        column-gap: 6rem;
+    }
+    .services_container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .contact_container {
+        grid-template-columns: 3fr 1.5fr 1.25fr;
+    }
+    .footer {
+        &_container {
+            grid-template-columns: repeat(5, 1fr);
+        }
+        &_social {
+            align-items: flex-start;
+
+            &-link {
+                font-size: 1.45rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .home {
+        &_img {
+            width: 540px;
+        }
+        &_description {
+            padding-right: 5rem;
+        }
+    }
+    .footer-container {
+        column-gap: 3rem;
+    }
+    .scrollup  {
+        right: 2rem;
+    }
+}

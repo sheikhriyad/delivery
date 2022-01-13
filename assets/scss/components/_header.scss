@@ -1,0 +1,91 @@
+/*=============== HEADER ===============*/
+.header{
+    width: 100%;
+    background-color: var(--body-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    transition: .5s; // For animation dark mode
+}
+
+/*=============== NAV ===============*/
+.nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_menu{
+        @media screen and (max-width: 767px){
+            position: fixed;
+            background-color: var(--container-color);
+            box-shadow: 0 0 4px rgba(0,0,0,.1);
+            padding: 2.5rem 0;
+            width: 90%;
+            top: -100%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            transition: .4s;
+            border-radius: 2rem;
+            z-index: var(--z-fixed);
+        }
+    }
+    &_list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1.5rem;
+    }
+    &_link, 
+    &_logo, 
+    &_toggle{
+        color: var(--title-color);
+        font-weight: var(--font-semi-bold);
+        text-transform: var(--text-transform-capitalize);
+    }
+    &_toggle{
+        font-size: 1.3rem;
+        cursor: pointer;
+    }
+}
+
+// Show Menu
+.show-menu{
+    top: calc(var(--header-height) + 1rem);
+}
+.active-link{
+    position: relative;
+
+    &::before{
+        content: '';
+        position: absolute;
+        bottom: -.75rem;
+        left: 45%;
+        width: 5px;
+        height: 5px;
+        background-color: var(--title-color);
+        border-radius: 50%;
+    }
+}
+
+// Change Header Background Color
+.scroll-header{
+    box-shadow: 0 1px 4px rgba(0,0,0,.1);
+}
+
+// Scroll Bar
+::-webkit-scrollbar {
+    width: .6rem;
+    border-radius: .5rem;
+    background-color: var(--scroll-bar-color);
+    &_thumb {
+        background-color: var(--scroll-thumb-color);
+        border-radius: .5rem;
+
+        &:hover {
+            background-color: var(--text-color-light);
+        }
+    }
+}
